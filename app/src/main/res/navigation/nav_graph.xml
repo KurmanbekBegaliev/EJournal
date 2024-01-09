@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.ejournal.ui.fragments.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.ejournal.ui.fragments.news.NewsFragment"
+        android:label="Новости"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.ejournal.ui.fragments.schedule.ScheduleFragment"
+        android:label="Расписания"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/myClassFragment"
+        android:name="com.example.ejournal.ui.fragments.myClass.MyClassFragment"
+        android:label="Мой класс"
+        tools:layout="@layout/fragment_my_class" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.ejournal.ui.fragments.profile.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
