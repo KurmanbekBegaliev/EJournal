@@ -5,18 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.ejournal.R
+import com.example.ejournal.base.BaseFragment
+import com.example.ejournal.databinding.FragmentProfileBinding
+import com.example.ejournal.tools.setImage
+import dagger.hilt.android.AndroidEntryPoint
 
-class ProfileFragment : Fragment() {
+@AndroidEntryPoint
+class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>() {
+    override fun getViewBinding(): FragmentProfileBinding = FragmentProfileBinding.inflate(layoutInflater)
 
+    override val viewModel: ProfileViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+    override fun initialize() {
+        binding.imgUserAvatar.setImage("https://studentapi2002.pythonanywhere.com/media/photo/2023/12/22/4.png")
     }
-
 
 }

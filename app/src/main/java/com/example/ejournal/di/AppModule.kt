@@ -17,7 +17,7 @@ class AppModule {
     @Singleton
     fun provideRetrofit(): ApiService {
         return Retrofit.Builder()
-            .baseUrl("http://studentapi2002.pythonanywhere.com/")
+            .baseUrl("https://studentapi2002.pythonanywhere.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)

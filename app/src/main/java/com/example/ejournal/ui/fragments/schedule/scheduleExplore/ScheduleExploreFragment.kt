@@ -10,7 +10,9 @@ import com.example.ejournal.base.BaseFragment
 import com.example.ejournal.databinding.FragmentScheduleExploreBinding
 import com.example.ejournal.ui.fragments.news.NewsAdapter
 import com.example.ejournal.ui.fragments.schedule.adapters.ScheduleExploreAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ScheduleExploreFragment : BaseFragment<FragmentScheduleExploreBinding, ScheduleExploreViewModel>() {
     override fun getViewBinding(): FragmentScheduleExploreBinding = FragmentScheduleExploreBinding.inflate(layoutInflater)
 
